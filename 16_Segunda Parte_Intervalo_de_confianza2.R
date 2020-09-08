@@ -5,7 +5,7 @@
 ## Segunda Parte - Ejercicio 16 ########################
 ########################################################
 
-## Test de Hipótesis
+## Intervalos de Confianza
 
 #' En la primera parte del trabajo práctico se realizaron varias simulaciones de 
 #' procesos aleatorios intentando ver si se obtenían resultados consistentes con 
@@ -51,7 +51,7 @@ p_muestral
 #' utilicemos el resultado muestral para construir intervalos de confianza para 
 #' la proporción poblacional. Utilizaremos niveles de confianza del 90%, 95% y 99%.
 
-#' ¿Qué supuestos son necesarios para realizar el test de hipótesis? ¿Se cumplen? 
+#' ¿Qué supuestos son necesarios para construir el intervalo de confianza? ¿Se cumplen? 
   
 #' ¿Qué distribución utilizará? 
   
@@ -111,7 +111,7 @@ p_muestral <-      ### COMPLETAR
 #' construir intervalos de confianza para la proporción poblacional. Utilizaremos niveles 
 #' de confianza del 90%, 95% y 99%.
 
-#' ¿Qué supuestos son necesarios para realizar el test de hipótesis? ¿Se cumplen? 
+#' ¿Qué supuestos son necesarios para construir el intervalo de confianza? ¿Se cumplen? 
 
 #' ¿Qué distribución utilizará? 
 
@@ -174,7 +174,7 @@ p_muestral <-      ### COMPLETAR
 #' construir intervalos de confianza para la proporción poblacional. Utilizaremos niveles 
 #' de confianza del 90%, 95% y 99%.
 
-#' ¿Qué supuestos son necesarios para realizar el test de hipótesis? ¿Se cumplen? 
+#' ¿Qué supuestos son necesarios para construir el intervalo de confianza? ¿Se cumplen? 
 
 #' ¿Qué distribución utilizará? 
 
