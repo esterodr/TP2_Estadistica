@@ -32,7 +32,7 @@ load("./archivos/ames.RData")
 
 ##' La base de datos contiene una gran cantidad de variables (puede explorar tipeando head(ames) en 
 ##' la consola). Para empezar, sólo nos centraremos en una de ellas: el área del hogar en pies cuadrados.
-##' Guardamos esta variable en un objetos con nombres adecuado y convertimos el área del hogar
+##' Guardamos esta variable en un objeto con nombre adecuado y convertimos el área del hogar
 ##' a metros cuadrados para facilitar su interpretación.
 
 
@@ -82,10 +82,10 @@ mean(muestra1)
 
 
 ##' Dependiendo de cuáles fueron los 50 hogares incluidos en la muestra, el promedio estimado
-##' estará un poco por encima o por debajo del verdadero promedio de la población (139.3212
-##' metros cuadrados). Sin embargo, la media muestral resulta ser un muy buen estimador del
-##' tamaño promedio de los hogares, y se la consiguió estimar con menos del 3% de los hogares
-##' que conforman la población.
+##' estará un poco por encima o por debajo del verdadero promedio de la población . Sin embargo, 
+##' la media muestral suele resultar un buen estimador del tamaño promedio de los hogares, dando 
+##' un resultado no muy diferente al real y requiriendo para su cálculo menos del 3% de los 
+##' hogares que conforman la población.
 
 ##' Tomemos otra muestra aleatoria, también de 50 hogares. ¿El promedio da muy distinto al de la primer muestra?
 
@@ -197,9 +197,9 @@ for(i in 1:5000){
 ###### Ejecutar desde aqui #################################
 ##' Grafiquemos las 3 distribuciones juntas para ver las diferencias
 data.frame(Media=c(medias_muestrales_10, medias_muestrales_50, medias_muestrales_100),
-           N = c(rep("1. Muestras de 10 hogares",5000),
-                 rep("2. Muestras de 50 hogares",5000),
-                 rep("3. Muestras de 100 hogares",5000))) %>%
+           N = c(rep("1. Distribución de medias muestrales de tamaño 10",5000),
+                 rep("2. Distribución de medias muestrales de tamaño 50",5000),
+                 rep("3. Distribución de medias muestrales de tamaño 100",5000))) %>%
   ggplot(aes(x=Media)) +
   geom_histogram(binwidth = 1, fill="cyan", color="black") +
   xlab("Área promedio (m2) de la muestra") +
@@ -308,9 +308,9 @@ for(i in 1:5000){
 ###### Ejecutar desde aqui #################################
 ##' Grafiquemos las 3 distribuciones juntas para ver las diferencias
 data.frame(Media=c(medias_muestrales_10, medias_muestrales_50, medias_muestrales_100),
-           N = c(rep("1. Muestras de 10 hogares",5000),
-                 rep("2. Muestras de 50 hogares",5000),
-                 rep("3. Muestras de 100 hogares",5000))) %>%
+           N = c(rep("1. Distribución de medias muestrales de tamaño 10",5000),
+                 rep("2. Distribución de medias muestrales de tamaño 50",5000),
+                 rep("3. Distribución de medias muestrales de tamaño 100",5000))) %>%
   ggplot(aes(x=Media)) +
   geom_histogram(binwidth = 2500, fill="cyan", color="black") +
   theme_classic() +

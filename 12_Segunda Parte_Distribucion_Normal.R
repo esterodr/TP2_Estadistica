@@ -57,7 +57,7 @@ bdims %>% ggplot() +
 
 ##' Notar que ambas distribuciones tienen forma de campana y son aproximadamente simétricas.
 ##' ¿Podemos decir que siguen distribuciones aproximadamente normales?
-##' Para una primera aproximación, grafiaremos encima de cada histograma una distribución Normal.
+##' Para una primera aproximación, graficaremos encima de cada histograma una distribución Normal.
 ##' Esta distribución Normal deberá tener la misma media y desvío standard que los datos originales.
 ##' Empecemos con el caso de las mujeres:
 
@@ -116,6 +116,26 @@ data.frame(Altura=hombres$Altura,
 ##' (Quantile significa cuantil o percentil). El gráfico consiste en comparar si los percentiles de la
 ##' distribución que estamos analizando se corresponden con los de la distribución Normal.
 
+##' A modo de ejemplo, el primer cuartil (percentil 25) de las alturas de las mujeres de la base de datos es:
+
+
+###### Ejecutar desde aqui #################################
+quantile(mujeres$Altura,0.25)
+###### Hasta aqui ##########################################
+
+
+##' Por su parte, si la población fuera exactamente normal, con media y desvíos iguales a los de nuestra base
+##' de datos, el primer cuartil (percentil 25) debería ser:
+
+
+###### Ejecutar desde aqui #################################
+qnorm(0.25,mean=altura_media_mujeres,sd=sd_altura_mujeres)
+###### Hasta aqui ##########################################
+
+
+##' Notará que son valores bastante parecidos. El gráfico QQ consiste en realizar esta comparación para todos
+##' los percentiles.
+
 ##' Veamos el gráfico para la altura de las mujeres
 
 
@@ -141,7 +161,10 @@ qqline(hombres$Altura)
 ##' Al igual que para el caso de las mujeres, podemos concluir que la distribución Normal es una buena 
 ##' aproximación de la distribución de la altura de los hombres.
 ##' De esta forma, podemos utilizar todo lo que sabemos de la distribución Normal para responder preguntas
-##' sobre la altura de las personas
+##' sobre la altura de las personas.
+
+##' A partir de ahora nos enfocaremos en valores específicos de nuestro conjunto de datos y veremos
+##' si la distribución normal produce estimaciones razonables de las probabilidades.
 
 ##' Suponiendo una distribución Normal, ¿Cuál es la probabilidad de que una mujer adulta seleccionada 
 ##' al azar mida más de 170 cm.?
@@ -164,7 +187,7 @@ sum(mujeres$Altura > 170) / length(mujeres$Altura)
 ###### Hasta aqui ##########################################
 
 
-##' ¿La proporción es cercana a la estimada mediante la distribución Normal?
+##' ¿La proporción es cercana a la estimada mediante la distribución Normal? Interprete.
 
 ##' Suponiendo una distribución Normal, ¿Cuál es la probabilidad de que un hombre adulto seleccionado 
 ##' al azar mida más de 170 cm.?
@@ -187,5 +210,5 @@ sum(hombres$Altura > 170) / length(hombres$Altura)
 ###### Hasta aqui ##########################################
 
 
-##' ¿La proporción es cercana a la estimada mediante la distribución Normal?
+##' ¿La proporción es cercana a la estimada mediante la distribución Normal? Interprete.
 

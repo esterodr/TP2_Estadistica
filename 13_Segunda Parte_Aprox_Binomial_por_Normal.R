@@ -62,7 +62,7 @@ data.frame(caras=c(497500:502500),
 
 #' ¿Cuál es la probabilidad de que se obtenga más de un 50.3% de caras?
 #' Es decir, más de 503000 caras del millón de lanzamientos
-#' Utilice la distribución Normal para aproximar la binomial
+#' Utilice la distribución Normal para aproximar la binomial e interprete los resultados.
 
 
 ###### Ejecutar desde aqui #################################
@@ -92,7 +92,7 @@ p_exacta - p_aproximada
 #' ¿Considera que la aproximación mediante la Normal es razonable?
 
 #' Sin embargo, recuerde que cuando se aproxima una variable discreta (binomial) mediante
-#' una variable contínua (normal) es recomendable aplicar un "factor de corrección".
+#' una variable continua (normal) es recomendable aplicar un "factor de corrección".
 #' En este caso, al hacer la aproximación con la normal tendríamos que haber calculado la
 #' probabilidad de que la variable sea mayor a 503000 + 0.5.
 #' ¿Cuál es esta probabilidad?
@@ -119,7 +119,7 @@ p_exacta - p_aproximada_factor_correccion
 #' ¿Cuál es la probabilidad de que se obtenga menos de un 50.1% de caras?
 #' Es decir, menos de 501000 caras del millón de lanzamientos
 #' Utilice la distribución Normal para aproximar la binomial, probando tanto con o sin el 
-#' factor de corrección para comparar los resultados.
+#' factor de corrección para comparar los resultados. Interprete los resultados.
 
 # Sin factor de corrección
 ###### Ejecutar desde aqui #################################
@@ -136,7 +136,7 @@ p_aproximada_factor_correccion
 
 
 #' Si hubiese podido calcular la distribución Binomial, por ejemplo, usando R, 
-#' ¿Cuál sería la probabilidad exacta de que salgan menos de 505000 caras del millón de lanzamientos
+#' ¿Cuál sería la probabilidad exacta de que salgan menos de 501000 caras del millón de lanzamientos
 
 
 ###### Ejecutar desde aqui #################################
@@ -160,7 +160,7 @@ p_exacta - p_aproximada_factor_correccion
 #' Es decir, entre 499900 y 500100 caras en el millón de lanzamientos.
 #' Utilice la distribución Normal para aproximar la binomial, 
 #' probando tanto con o sin el factor de corrección para comparar los resultados.
-#' Graficar el resultado.
+#' Interprete los resultados.
 
 
 ###### Ejecutar desde aqui #################################
